@@ -6,14 +6,14 @@ A modern, responsive static website for BrightOps Group showcasing cloud consult
 
 ## Project Overview
 
-The BrightOps Group website is built as a static site that can be hosted on GitHub Pages. It features a clean, professional design with a fun, laid-back startup vibe to showcase cloud consulting services.
+The BrightOps Group website is built as a static site for Cloudflare Pages. It features a clean, professional design with a fun, laid-back startup vibe to showcase cloud consulting services.
 
 ### Technology Stack
 
 - **Frontend**: React.js with TypeScript
 - **Styling**: TailwindCSS
 - **Build System**: Vite
-- **Deployment Platform**: GitHub Pages
+- **Deployment Platform**: Cloudflare Pages
 
 ### Key Features
 
@@ -21,38 +21,34 @@ The BrightOps Group website is built as a static site that can be hosted on GitH
 - Modern, interactive UI elements with subtle animations
 - Optimized performance with quick load times
 - SEO-friendly structure
-- Static site compatible with GitHub Pages hosting
+- Static site compatible with Cloudflare Pages hosting
 
 ## Local Development
 
 ### Prerequisites
 
-- Node.js 18 or newer
-- npm or yarn
+- Node.js 22 or newer
+- npm
 
 ### Setup Instructions
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/brightops-group-website.git
-   cd brightops-group-website
+   git clone https://github.com/brightopsgroup/brightopsgroup.github.io.git
+   cd brightopsgroup.github.io
    ```
 
 2. Install dependencies:
    ```bash
    npm install
-   # or if you use yarn
-   yarn install
    ```
 
 3. Start the development server:
    ```bash
    npm run dev
-   # or with yarn
-   yarn dev
    ```
 
-4. Open your browser and navigate to `http://localhost:5000`
+4. Open your browser and navigate to the Vite URL shown in the terminal, usually `http://localhost:5173`
 
 ## Building for Production
 
@@ -60,102 +56,38 @@ When you're ready to build the site for production:
 
 ```bash
 npm run build
-# or with yarn
-yarn build
 ```
 
-This will create a production-ready build in the `dist` directory.
+This creates a production-ready build in the `dist` directory.
 
-## Deploying to GitHub Pages
+## Deploying to Cloudflare Pages
 
-### Option 1: Manual Deployment
+The project is configured for Cloudflare Pages in `wrangler.toml`.
 
-1. Build the project:
-   ```bash
-   npm run build
-   ```
+Use these Cloudflare Pages settings if connecting the GitHub repository through the dashboard:
 
-2. Create (or update) a `.github/workflows/deploy.yml` file with the following content:
-   ```yaml
-   name: Deploy to GitHub Pages
+- **Production branch**: `main`
+- **Framework preset**: Vite
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Node.js version**: 22 or newer
 
-   on:
-     push:
-       branches: [ main ]
-     workflow_dispatch:
+To deploy manually with Wrangler:
 
-   jobs:
-     build-and-deploy:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout
-           uses: actions/checkout@v3
+```bash
+npm ci
+npm run build
+npx wrangler pages deploy dist --project-name brightopsgroup
+```
 
-         - name: Setup Node.js
-           uses: actions/setup-node@v3
-           with:
-             node-version: '18'
-
-         - name: Install dependencies
-           run: npm ci
-
-         - name: Build
-           run: npm run build
-
-         - name: Deploy to GitHub Pages
-           uses: JamesIves/github-pages-deploy-action@v4
-           with:
-             folder: dist
-             branch: gh-pages
-   ```
-
-3. Push to your GitHub repository:
-   ```bash
-   git add .
-   git commit -m "Add GitHub Pages deployment workflow"
-   git push
-   ```
-
-4. Go to your GitHub repository settings, navigate to the "Pages" section, and set the source to the "gh-pages" branch.
-
-### Option 2: Using gh-pages package
-
-1. Install the `gh-pages` package:
-   ```bash
-   npm install gh-pages --save-dev
-   # or with yarn
-   yarn add gh-pages --dev
-   ```
-
-2. Add these scripts to your `package.json`:
-   ```json
-   "scripts": {
-     // other scripts...
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-
-3. Update the `vite.config.ts` file to use the correct base path for GitHub Pages:
-   ```typescript
-   export default defineConfig({
-     base: '/your-repo-name/',
-     // other config...
-   });
-   ```
-
-4. Deploy with:
-   ```bash
-   npm run deploy
-   # or with yarn
-   yarn deploy
-   ```
+The custom domain `brightopsgroup.com` should be attached to the Cloudflare Pages project in Cloudflare.
 
 ## Project Structure
 
 ```
-brightops-group-website/
+brightopsgroup.github.io/
 ├── client/              # Frontend code
+│   ├── public/           # Cloudflare Pages static config such as _redirects
 │   ├── src/             # Source files
 │   │   ├── assets/      # Images, fonts, etc.
 │   │   ├── components/  # React components
@@ -166,8 +98,9 @@ brightops-group-website/
 │   │   ├── index.css    # Global CSS
 │   │   └── main.tsx     # Entry point
 │   └── index.html       # HTML template
-├── server/              # Server for local development
-├── dist/                # Built files (after running build)
+├── docs/                # Legacy GitHub Pages build output
+├── dist/                # Cloudflare Pages build output after running build
+├── server/              # Legacy server scaffold, not used by Cloudflare Pages
 └── README.md            # This file
 ```
 
