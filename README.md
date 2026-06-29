@@ -34,8 +34,8 @@ The BrightOps Group website is built as a static site for Cloudflare Pages. It f
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/brightopsgroup/brightopsgroup.github.io.git
-   cd brightopsgroup.github.io
+   git clone https://github.com/brightopsgroup/brightopsgroup.com.git
+   cd brightopsgroup.com
    ```
 
 2. Install dependencies:
@@ -67,10 +67,10 @@ The project is configured for Cloudflare Pages in `wrangler.toml`.
 Use these Cloudflare Pages settings if connecting the GitHub repository through the dashboard:
 
 - **Production branch**: `main`
-- **Framework preset**: Vite
+- **Framework preset**: React (Vite)
 - **Build command**: `npm run build`
 - **Build output directory**: `dist`
-- **Node.js version**: 22 or newer
+- **Node.js version**: 22.12.0 or newer
 
 To deploy manually with Wrangler:
 
@@ -85,7 +85,7 @@ The custom domain `brightopsgroup.com` should be attached to the Cloudflare Page
 ## Project Structure
 
 ```
-brightopsgroup.github.io/
+brightopsgroup.com/
 ├── client/              # Frontend code
 │   ├── public/           # Cloudflare Pages static config such as _redirects
 │   ├── src/             # Source files
