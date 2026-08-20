@@ -4,8 +4,8 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-archivo font-bold mb-6">Why Founders Breathe Easier After Talking to Us</h2>
-            <p className="text-lg text-ivory/80 mb-8">We're not your average cloud consultants. Here's why startups like working with us.</p>
+            <h2 className="text-3xl md:text-4xl font-archivo font-bold mb-6">Why Teams Breathe Easier After Talking to Us</h2>
+            <p className="text-lg text-ivory/80 mb-8">We're not here to sell AI theater. We're here to help you ship useful systems your team will actually use.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -15,8 +15,8 @@ export default function WhyChooseUs() {
                   <i className="fas fa-rocket text-2xl"></i>
                 </div>
                 <div>
-                  <h3 className="font-archivo font-semibold text-lg mb-2">Startup DNA</h3>
-                  <p className="text-ivory/70">We get startup culture. Speed, agility, limited resources—been there. We work the way you do.</p>
+                  <h3 className="font-archivo font-semibold text-lg mb-2">Operator DNA</h3>
+                  <p className="text-ivory/70">We care about the messy middle: handoffs, tools, approvals, data quality, and all the small things that make work slow.</p>
                 </div>
               </div>
             </div>
@@ -27,8 +27,8 @@ export default function WhyChooseUs() {
                   <i className="fas fa-shield-alt text-2xl"></i>
                 </div>
                 <div>
-                  <h3 className="font-archivo font-semibold text-lg mb-2">Security First</h3>
-                  <p className="text-ivory/70">We speak both security and startup.</p>
+                  <h3 className="font-archivo font-semibold text-lg mb-2">AI That Respects Your Data</h3>
+                  <p className="text-ivory/70">We help you move fast without casually spraying private data into tools nobody reviewed.</p>
                 </div>
               </div>
             </div>
@@ -39,8 +39,8 @@ export default function WhyChooseUs() {
                   <i className="fas fa-cloud text-2xl"></i>
                 </div>
                 <div>
-                  <h3 className="font-archivo font-semibold text-lg mb-2">Cloud Experts</h3>
-                  <p className="text-ivory/70">We live and breathe cloud platforms. From cost optimization to security, we know them inside and out.</p>
+                  <h3 className="font-archivo font-semibold text-lg mb-2">Cloud-Smart AI</h3>
+                  <p className="text-ivory/70">Models are only part of the system. We understand the infrastructure, integrations, and costs underneath.</p>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
                 </div>
                 <div>
                   <h3 className="font-archivo font-semibold text-lg mb-2">Actual Humans</h3>
-                  <p className="text-ivory/70">We're real people who answer emails, explain things clearly, and don't hide behind tech jargon.</p>
+                  <p className="text-ivory/70">We answer emails, explain tradeoffs clearly, and teach your team how the thing works after it ships.</p>
                 </div>
               </div>
             </div>
