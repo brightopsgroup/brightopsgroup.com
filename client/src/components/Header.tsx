@@ -48,7 +48,7 @@ export default function Header() {
             <a href="/#services" className="nav-link text-onyx hover:text-pumpkin transition-colors font-medium">Services</a>
             <a href="/#about" className="nav-link text-onyx hover:text-pumpkin transition-colors font-medium">About Us</a>
             <Link href="/tools">
-              <span className="nav-link text-onyx hover:text-pumpkin transition-colors font-medium cursor-pointer">Tools</span>
+              <span className="nav-link text-onyx hover:text-pumpkin transition-colors font-medium cursor-pointer">Resources</span>
             </Link>
             <a href="/#contact" className="nav-link text-onyx hover:text-pumpkin transition-colors font-medium">Contact</a>
             <a href="/#contact" className="btn-primary hover:shadow-glow">Let's Chat!</a>
@@ -75,7 +75,7 @@ export default function Header() {
             <a href="/#services" className="block px-3 py-2 text-onyx hover:text-pumpkin transition-colors font-medium rounded hover:bg-ivory" onClick={closeMobileMenu}>Services</a>
             <a href="/#about" className="block px-3 py-2 text-onyx hover:text-pumpkin transition-colors font-medium rounded hover:bg-ivory" onClick={closeMobileMenu}>About Us</a>
             <Link href="/tools">
-              <span className="block px-3 py-2 text-onyx hover:text-pumpkin transition-colors font-medium cursor-pointer rounded hover:bg-ivory" onClick={closeMobileMenu}>Tools</span>
+              <span className="block px-3 py-2 text-onyx hover:text-pumpkin transition-colors font-medium cursor-pointer rounded hover:bg-ivory" onClick={closeMobileMenu}>Resources</span>
             </Link>
             <a href="/#contact" className="block px-3 py-2 text-onyx hover:text-pumpkin transition-colors font-medium rounded hover:bg-ivory" onClick={closeMobileMenu}>Contact</a>
             <a href="/#contact" className="block px-3 py-2 mt-2 bg-pumpkin text-white rounded-md font-medium hover:shadow-glow transition-all transform hover:-translate-y-1" onClick={closeMobileMenu}>Let's Chat!</a>

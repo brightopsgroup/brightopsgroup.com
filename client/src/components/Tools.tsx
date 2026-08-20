@@ -1,4 +1,37 @@
-import IconSVG from './IconSVG';
+const tools = [
+  {
+    icon: "fas fa-compass",
+    title: "Find a Good First AI Project",
+    description: "A practical way to spot work where AI can save real time: intake, routing, summarizing, reporting, research, and knowledge lookup.",
+    details: ["Happens often", "Has clear inputs", "Has a result someone can review"],
+    linkText: "Find my first project",
+    href: "/#contact",
+  },
+  {
+    icon: "fas fa-robot",
+    title: "Automate One Annoying Workflow",
+    description: "Pick one manual process, define the steps, connect the tools, and turn it into something your team no longer has to babysit.",
+    details: ["List the steps", "Name the tools involved", "Decide where a human approves it"],
+    linkText: "Automate a workflow",
+    href: "/#contact",
+  },
+  {
+    icon: "fas fa-comments",
+    title: "Build an Internal AI Assistant",
+    description: "Create a chat-style helper that answers questions from your docs, policies, SOPs, sales notes, or support knowledge base.",
+    details: ["Choose trusted sources", "Limit who can access it", "Test with real questions"],
+    linkText: "Plan an assistant",
+    href: "/#contact",
+  },
+  {
+    icon: "fas fa-shield-alt",
+    title: "Check Privacy, Access, and Cost",
+    description: "Review what data AI can see, who can use it, what it costs, and where a quick experiment could become a tomorrow morning problem.",
+    details: ["Protect private data", "Track usage and cost", "Log mistakes and fixes"],
+    linkText: "Check the risks",
+    href: "/#contact",
+  },
+];
 
 export default function Tools() {
   return (
@@ -8,10 +41,10 @@ export default function Tools() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-archivo font-bold text-onyx mb-6 leading-tight">
-              Our GitHub Tools
+              AI Resources & Tools
             </h1>
             <p className="text-lg md:text-xl text-onyx/80 mb-8 max-w-xl mx-auto">
-              Free, simple cloud tools that make your life easier
+              Plain-English starting points for choosing and building useful AI projects
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -19,12 +52,10 @@ export default function Tools() {
                 Back to Home
               </a>
               <a 
-                href="https://github.com/BrightOpsGroup" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href="/#contact" 
                 className="btn-primary inline-block px-6 py-3 text-lg w-full sm:w-auto text-center"
               >
-                Visit Our GitHub
+                Talk Through an Idea
               </a>
             </div>
           </div>
@@ -36,105 +67,36 @@ export default function Tools() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 gap-8">
-              {/* Tool 1 */}
-              <div className="bg-ivory rounded-lg p-6 hover:shadow-md transition-shadow transform hover:-translate-y-1">
-                <div className="flex items-center mb-4">
-                  <div className="w-14 h-14 bg-onyx rounded-full flex items-center justify-center mr-4 shadow-md">
-                    <IconSVG type="cost" className="w-8 h-8" color="#ff8c42" />
+              {tools.map((tool) => (
+                <div key={tool.title} className="bg-ivory rounded-lg p-6 hover:shadow-md transition-shadow transform hover:-translate-y-1">
+                  <div className="flex items-center mb-4">
+                    <div className="w-14 h-14 bg-onyx rounded-full flex items-center justify-center mr-4 shadow-md text-pumpkin">
+                      <i className={`${tool.icon} text-2xl`}></i>
+                    </div>
+                    <h2 className="text-2xl font-archivo font-bold text-onyx">{tool.title}</h2>
                   </div>
-                  <h2 className="text-2xl font-archivo font-bold text-onyx">Roi - FinOps CLI</h2>
-                </div>
-                <p className="text-onyx/80 mb-4">
-                  A simple command-line tool to identify cost savings in your AWS, Azure, or GCP environment. 
-                  Find idle resources, right-sizing opportunities, and reserved instance recommendations.
-                </p>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://github.com/BrightOpsGroup/roi" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center text-pumpkin font-medium hover:underline"
-                  >
-                    <i className="fab fa-github mr-2"></i>
-                    GitHub Repository
-                  </a>
-                </div>
-              </div>
-              
-              {/* Tool 2 */}
-              <div className="bg-ivory rounded-lg p-6 hover:shadow-md transition-shadow transform hover:-translate-y-1">
-                <div className="flex items-center mb-4">
-                  <div className="w-14 h-14 bg-onyx rounded-full flex items-center justify-center mr-4 shadow-md">
-                    <IconSVG type="security" className="w-8 h-8" color="#ff8c42" />
+                  <p className="text-onyx/80 mb-4">
+                    {tool.description}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+                    {tool.details.map((detail) => (
+                      <div key={detail} className="bg-white rounded-md px-3 py-2 text-sm text-onyx/70 flex items-center">
+                        <i className="fas fa-check text-pumpkin mr-2"></i>
+                        <span>{detail}</span>
+                      </div>
+                    ))}
                   </div>
-                  <h2 className="text-2xl font-archivo font-bold text-onyx">Security CLI</h2>
-                </div>
-                <p className="text-onyx/80 mb-4">
-                  A lightweight security scanner for cloud environments. Checks for common misconfigurations, 
-                  insecure permissions, and compliance issues. Generates easy-to-read reports to help fix problems.
-                </p>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://github.com/BrightOpsGroup/security-cli" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center text-pumpkin font-medium hover:underline"
-                  >
-                    <i className="fab fa-github mr-2"></i>
-                    GitHub Repository
-                  </a>
-                </div>
-              </div>
-              
-              {/* Tool 3 */}
-              <div className="bg-ivory rounded-lg p-6 hover:shadow-md transition-shadow transform hover:-translate-y-1">
-                <div className="flex items-center mb-4">
-                  <div className="w-14 h-14 bg-onyx rounded-full flex items-center justify-center mr-4 shadow-md">
-                    <IconSVG type="cloud" className="w-8 h-8" color="#ff8c42" />
+                  <div className="flex space-x-4">
+                    <a 
+                      href={tool.href}
+                      className="inline-flex items-center text-pumpkin font-medium hover:underline"
+                    >
+                      <i className="fas fa-arrow-right mr-2"></i>
+                      {tool.linkText}
+                    </a>
                   </div>
-                  <h2 className="text-2xl font-archivo font-bold text-onyx">Cloud Mapper</h2>
                 </div>
-                <p className="text-onyx/80 mb-4">
-                  Visualize your cloud infrastructure with simple, understandable diagrams. 
-                  Great for explaining your architecture to teammates or documenting your setup.
-                </p>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://github.com/BrightOpsGroup/cloud-mapper" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center text-pumpkin font-medium hover:underline"
-                  >
-                    <i className="fab fa-github mr-2"></i>
-                    GitHub Repository
-                  </a>
-                </div>
-              </div>
-              
-              {/* Tool 4 */}
-              <div className="bg-ivory rounded-lg p-6 hover:shadow-md transition-shadow transform hover:-translate-y-1">
-                <div className="flex items-center mb-4">
-                  <div className="w-14 h-14 bg-onyx rounded-full flex items-center justify-center mr-4 shadow-md">
-                    <IconSVG type="devops" className="w-8 h-8" color="#ff8c42" />
-                  </div>
-                  <h2 className="text-2xl font-archivo font-bold text-onyx">Deploy Buddy</h2>
-                </div>
-                <p className="text-onyx/80 mb-4">
-                  Simplify your deployment process. Pre-built templates for common deployment scenarios 
-                  that work with GitHub Actions, GitLab CI, and other CI/CD platforms.
-                </p>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://github.com/BrightOpsGroup/deploy-buddy" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center text-pumpkin font-medium hover:underline"
-                  >
-                    <i className="fab fa-github mr-2"></i>
-                    GitHub Repository
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -144,10 +106,9 @@ export default function Tools() {
       <section className="py-16 md:py-20 bg-pumpkin text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-archivo font-bold mb-6">Want Expert Help with These Tools?</h2>
+            <h2 className="text-3xl font-archivo font-bold mb-6">Want Help Making One Of These Real?</h2>
             <p className="text-lg md:text-xl mb-8">
-              Our team can help you implement and customize these tools for your specific cloud environment. 
-              We also offer training sessions to help your team get the most out of our tools.
+              We can help you choose the right AI use case, build a quick working version, connect it to your tools, and make sure privacy, access, and cost are handled too.
             </p>
             <a href="/#contact" className="inline-block bg-white text-pumpkin px-8 py-3 rounded-md font-archivo font-medium text-lg hover:bg-opacity-90 transition-all">
               Get in Touch

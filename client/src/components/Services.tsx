@@ -3,9 +3,9 @@ export default function Services() {
     <section id="services" className="py-16 md:py-24 bg-ivory">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-archivo font-bold text-onyx mb-4">Stuff That Buys You Time (and Peace)</h2>
+          <h2 className="text-3xl md:text-4xl font-archivo font-bold text-onyx mb-4">AI Help That Buys Back Your Week</h2>
           <p className="text-lg text-onyx/80 max-w-2xl mx-auto">
-            We're your cloud crew—cutting spend, locking down infra, and keeping your startup alive long enough to actually raise that next round.
+            Clear advice, useful automations, and AI helpers that answer questions or finish repetitive work without turning your business into a science fair project.
           </p>
         </div>
         
@@ -13,56 +13,56 @@ export default function Services() {
           {/* Service 1 */}
           <div className="bg-white rounded-lg shadow-sm border-l-4 border-pumpkin p-6 flex flex-col h-full hover:shadow-md transition-shadow hover:-translate-y-1">
             <div className="text-pumpkin mb-4">
-              <i className="fas fa-cloud text-3xl"></i>
+              <i className="fas fa-lightbulb text-3xl"></i>
             </div>
-            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">🧠 Cloud Architecture That Makes Sense</h3>
+            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">Find the Right AI Projects</h3>
             <p className="text-onyx/70 flex-grow">
-              We build startup-friendly cloud infrastructure that works — no PhD required. Think fast, reliable, and ready to scale without torching your budget.
+              We find where AI can actually help: repeatable work, messy handoffs, buried knowledge, slow reporting, and expensive manual processes.
             </p>
             <div className="mt-4 pt-4 border-t border-gray-100">
-              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Tell me more</a>
+              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Find the wins</a>
             </div>
           </div>
           
           {/* Service 2 */}
           <div className="bg-white rounded-lg shadow-sm border-l-4 border-pumpkin p-6 flex flex-col h-full hover:shadow-md transition-shadow hover:-translate-y-1">
             <div className="text-pumpkin mb-4">
-              <i className="fas fa-chart-line text-3xl"></i>
+              <i className="fas fa-robot text-3xl"></i>
             </div>
-            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">📉 Cloud Bills That Don't Make You Cry</h3>
+            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">Automate Repetitive Work</h3>
             <p className="text-onyx/70 flex-grow">
-              No more mystery cloud invoices or surprise charges. We find the leaks, seal the holes, and give your runway a fighting chance.
+              We connect the tools your team already uses and automate the annoying parts: intake, routing, summarizing, reporting, and follow-up.
             </p>
             <div className="mt-4 pt-4 border-t border-gray-100">
-              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Yes please</a>
+              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Automate it</a>
             </div>
           </div>
           
           {/* Service 3 */}
           <div className="bg-white rounded-lg shadow-sm border-l-4 border-pumpkin p-6 flex flex-col h-full hover:shadow-md transition-shadow hover:-translate-y-1">
             <div className="text-pumpkin mb-4">
-              <i className="fas fa-shield-alt text-3xl"></i>
+              <i className="fas fa-comments text-3xl"></i>
             </div>
-            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">🔒 Cloud Security Without The Paranoia</h3>
+            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">Internal AI Assistants</h3>
             <p className="text-onyx/70 flex-grow">
-              We keep the compliance sharks happy without sinking your dev team. Pen testing, hardening, and cloud security that actually makes sense for startups.
+              Chat-style helpers that can answer questions from your policies, support docs, sales notes, SOPs, or knowledge base.
             </p>
             <div className="mt-4 pt-4 border-t border-gray-100">
-              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Lock it down</a>
+              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Build the assistant</a>
             </div>
           </div>
           
           {/* Service 4 */}
           <div className="bg-white rounded-lg shadow-sm border-l-4 border-pumpkin p-6 flex flex-col h-full hover:shadow-md transition-shadow hover:-translate-y-1">
             <div className="text-pumpkin mb-4">
-              <i className="fas fa-cogs text-3xl"></i>
+              <i className="fas fa-shield-alt text-3xl"></i>
             </div>
-            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">⚙️ Cloud DevOps & FinOps Magic</h3>
+            <h3 className="text-xl font-archivo font-semibold text-onyx mb-3">Set Up AI Safely</h3>
             <p className="text-onyx/70 flex-grow">
-              Automate, optimize, and stop duct-taping cloud infra together. We give your team the tools to move fast and stay secure.
+              We help with data access, permissions, cloud setup, logging, and cost controls so AI projects do not create new headaches.
             </p>
             <div className="mt-4 pt-4 border-t border-gray-100">
-              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Show me how</a>
+              <a href="#contact" className="inline-block text-pumpkin font-medium hover:underline">Set it up right</a>
             </div>
           </div>
         </div>

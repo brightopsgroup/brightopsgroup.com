@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="mb-10 md:mb-0 md:w-1/3">
               <LogoSVG className="h-12 mb-6" inverted={true} />
               <p className="text-gray-300 mb-6 max-w-xs leading-relaxed">
-                Cloud that doesn't suck, one startup at a time. We're here to help you scale without the tech headaches.
+                Practical AI and automation for teams that need the work to actually work.
               </p>
               <div className="flex space-x-4">
                 <a 
@@ -32,10 +32,10 @@ export default function Footer() {
               <div>
                 <h3 className="font-archivo font-semibold text-xl mb-4 text-white">Cool Stuff We Do</h3>
                 <ul className="space-y-3">
-                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">Cloud Architecture</a></li>
-                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">Cost Optimization</a></li>
-                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">Security Magic</a></li>
-                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">DevOps & FinOps</a></li>
+                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">AI Planning</a></li>
+                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">Automate Repetitive Work</a></li>
+                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">Internal AI Assistants</a></li>
+                  <li><a href="/#services" className="text-gray-300 hover:text-pumpkin transition-colors">Safe AI Setup</a></li>
                 </ul>
               </div>
               
@@ -43,7 +43,7 @@ export default function Footer() {
                 <h3 className="font-archivo font-semibold text-xl mb-4 text-white">Links</h3>
                 <ul className="space-y-3">
                   <li><a href="/#about" className="text-gray-300 hover:text-pumpkin transition-colors">About Us</a></li>
-                  <li><Link href="/tools"><span className="text-gray-300 hover:text-pumpkin transition-colors cursor-pointer">Our Tools</span></Link></li>
+                  <li><Link href="/tools"><span className="text-gray-300 hover:text-pumpkin transition-colors cursor-pointer">Resources</span></Link></li>
                   <li><a href="/#contact" className="text-gray-300 hover:text-pumpkin transition-colors">Contact</a></li>
                 </ul>
               </div>
@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
           
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} BrightOps Group. All rights reserved. Built with ☕ and code.</p>
+            <p>&copy; {new Date().getFullYear()} BrightOps Group. All rights reserved. Built with coffee and code.</p>
           </div>
         </div>
       </div>
